@@ -1,7 +1,4 @@
-import javax.print.DocFlavor;
 import java.io.*;
-import java.util.*;
-//import java.util.zip.ZipOutputStream;
 import java.util.zip.*;
 
 public class ZipArchiver {
@@ -43,23 +40,5 @@ public class ZipArchiver {
 }
 
 
-/*public static File expand(File inputFile) {
-        File outputFile = new File(inputFile.getName().replace(".ser", ".zip"));
-        try (ZipInputStream zipInputStream =
-                     new ZipInputStream(new FileInputStream(inputFile));
-             FileOutputStream fileOutputStream = new FileOutputStream(outputFile)) {
-            byte[] buffer = new byte[bufferLength];
-            while (zipInputStream.getNextEntry() != null) {
-                int bufLength;
-                while ((bufLength = zipInputStream.read(buffer, 0, bufferLength)) != -1) {
-                    fileOutputStream.write(buffer, 0, bufLength);
-                }
-            }
-        } catch (FileNotFoundException exc) {
-            System.out.println(String.format("File %s is not found", inputFile.getName()));
-        } catch (IOException exc) {
-            System.out.println("Cannot create zip-archive " + outputFile.getName() + ": " + exc.getMessage());
-        }
-        return outputFile;
-    }*/
+
 
