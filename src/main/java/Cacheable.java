@@ -5,7 +5,7 @@ import java.lang.annotation.Target;
 import java.util.ArrayList;
 
 /**
- *  flag is false if result saved to RAM and true if result saved to file
+ *  saveToFile is false if result saved to RAM and true if result saved to file
  *  indexes is array of field numbers,  that are important for result.
  *  Value {-1} is default value, that mean, that all fields are important.
  *  maxLengthList is max Length for cache from result (the first maxLengthList elements from results,
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Cacheable {
-    boolean flag() default false;
+    boolean saveTofile() default false;
     int[] indexes() default {-1};
     int maxLengthList() default Integer.MAX_VALUE;
     String folderNameCache() default "";
